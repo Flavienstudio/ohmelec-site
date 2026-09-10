@@ -545,12 +545,18 @@
 
   .album-detail{margin-top:56px;}
   .album-back{
-    display:inline-flex; align-items:center; gap:8px; margin-bottom:26px; padding:0;
-    background:none; border:none; color:var(--ink-dim); cursor:pointer;
-    font-size:12.5px; letter-spacing:.06em; text-transform:uppercase; font-weight:600;
+    display:inline-flex; align-items:center; gap:9px; margin-bottom:30px;
+    padding:12px 22px 12px 18px; border-radius:100px;
+    background:var(--glass-fill); border:1px solid var(--glass-border-strong);
+    backdrop-filter:blur(18px) saturate(160%); -webkit-backdrop-filter:blur(18px) saturate(160%);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.3), 0 8px 22px rgba(0,0,0,.28);
+    color:#fff; cursor:pointer;
+    font-size:13px; letter-spacing:.06em; text-transform:uppercase; font-weight:700;
     font-family:var(--sans);
+    transition:background .25s ease, transform .15s ease, box-shadow .25s ease;
   }
-  .album-back:hover{color:#fff;}
+  .album-back:hover{background:var(--glass-fill-strong); transform:translateY(-1px);}
+  .album-back:active{transform:translateY(0);}
   .album-detail h3{font-size:clamp(24px,3.4vw,34px); margin-bottom:6px;}
   .album-detail-count{display:block; margin-bottom:30px; color:var(--ink-faint); font-size:12.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:600;}
   .album-detail .real-grid{margin-top:0;}
@@ -1011,22 +1017,55 @@
   const albumGrid = document.getElementById('album-grid');
   const albumDetails = document.querySelectorAll('.album-detail');
   const contenuSection = document.getElementById('contenu');
-  function showAlbum(key){
+
+  // Scroll manuel qui tient compte de la hauteur réelle du header fixe,
+  // pour que le bouton "Tous les albums" ne se retrouve jamais caché dessous (notamment sur mobile).
+  function scrollToContenu(){
+    var offset = siteHeader.offsetHeight + 16;
+    var top = contenuSection.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: Math.max(top, 0), behavior: 'smooth' });
+  }
+
+  function showAlbum(key, pushState){
     albumGrid.style.display = 'none';
     albumDetails.forEach(function(d){ d.style.display = (d.dataset.album === key) ? 'block' : 'none'; });
-    contenuSection.scrollIntoView({block:'start'});
+    scrollToContenu();
+    if (pushState !== false) {
+      history.pushState({ album: key }, '', '#album-' + key);
+    }
   }
-  function showAlbumGrid(){
+  function showAlbumGrid(pushState){
     albumDetails.forEach(function(d){ d.style.display = 'none'; });
     albumGrid.style.display = 'grid';
-    contenuSection.scrollIntoView({block:'start'});
+    scrollToContenu();
+    if (pushState !== false) {
+      history.pushState({ album: null }, '', location.pathname + location.search);
+    }
   }
   document.querySelectorAll('.album-card').forEach(function(card){
     card.addEventListener('click', function(){ showAlbum(card.dataset.album); });
   });
   document.querySelectorAll('.album-back').forEach(function(btn){
-    btn.addEventListener('click', showAlbumGrid);
+    btn.addEventListener('click', function(){ showAlbumGrid(); });
   });
+
+  // Rend le bouton "retour" du téléphone / navigateur fonctionnel :
+  // depuis un album, "précédent" revient à la liste des albums au lieu de quitter la page.
+  window.addEventListener('popstate', function(e){
+    var key = e.state && e.state.album;
+    if (key) { showAlbum(key, false); }
+    else { showAlbumGrid(false); }
+  });
+
+  // Lien direct vers un album via #album-xxx (ex: partagé ou rechargé)
+  (function initFromHash(){
+    var hash = location.hash;
+    if (hash && hash.indexOf('#album-') === 0) {
+      var key = hash.slice(7);
+      var exists = Array.prototype.some.call(albumDetails, function(d){ return d.dataset.album === key; });
+      if (exists) { showAlbum(key, false); }
+    }
+  })();
 </script>
 
 </body>
