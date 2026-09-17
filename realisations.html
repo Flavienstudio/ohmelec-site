@@ -509,7 +509,7 @@
     margin-top:56px;
   }
   .real-item{display:flex; flex-direction:column; gap:16px;}
-  .real-photo{border-radius:22px; overflow:hidden; aspect-ratio:4/3.1;}
+  .real-photo{border-radius:22px; overflow:hidden; aspect-ratio:4/3.1; cursor:zoom-in;}
   .real-photo img{width:100%; height:100%; object-fit:cover; transition:transform .5s ease;}
   .real-item:hover .real-photo img{transform:scale(1.05);}
   .real-cap{padding:0 4px;}
@@ -542,6 +542,53 @@
   }
   .album-card-title{font-family:var(--serif); font-size:20px; font-weight:500;}
   .album-card-count{font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-dim); font-weight:600;}
+  .album-card-placeholder{
+    width:100%; height:100%; display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(160deg, rgba(255,255,255,.10), rgba(255,255,255,.02));
+  }
+  .album-card-placeholder svg{width:56px; height:56px; stroke:rgba(255,255,255,.5);}
+
+  .lightbox{
+    position:fixed; inset:0; z-index:300;
+    display:flex; align-items:center; justify-content:center;
+    background:rgba(5,5,6,.92);
+    opacity:0; visibility:hidden;
+    transition:opacity .25s ease, visibility .25s ease;
+    padding:24px;
+  }
+  .lightbox.open{opacity:1; visibility:visible;}
+  .lightbox-img{
+    max-width:min(1100px, 92vw); max-height:82vh;
+    width:auto; height:auto; object-fit:contain;
+    border-radius:16px;
+    box-shadow:0 30px 80px rgba(0,0,0,.5);
+  }
+  .lightbox-caption{
+    position:absolute; left:0; right:0; bottom:26px;
+    text-align:center; color:#fff; font-size:14px; letter-spacing:.02em;
+    padding:0 80px;
+  }
+  .lightbox-close, .lightbox-prev, .lightbox-next{
+    position:absolute;
+    display:flex; align-items:center; justify-content:center;
+    width:46px; height:46px; border-radius:50%;
+    background:var(--glass-fill); border:1px solid var(--glass-border-strong);
+    backdrop-filter:blur(18px) saturate(160%); -webkit-backdrop-filter:blur(18px) saturate(160%);
+    color:#fff; cursor:pointer; font-size:22px; line-height:1;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.3), 0 8px 22px rgba(0,0,0,.28);
+    transition:background .2s ease, transform .15s ease;
+  }
+  .lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover{background:var(--glass-fill-strong);}
+  .lightbox-close{top:24px; right:24px;}
+  .lightbox-prev{left:24px; top:50%; transform:translateY(-50%);}
+  .lightbox-next{right:24px; top:50%; transform:translateY(-50%);}
+  @media (max-width:640px){
+    .lightbox-caption{padding:0 20px; bottom:16px; font-size:12.5px;}
+    .lightbox-close, .lightbox-prev, .lightbox-next{width:40px; height:40px; font-size:18px;}
+    .lightbox-prev{left:10px;}
+    .lightbox-next{right:10px;}
+    .lightbox-close{top:14px; right:14px;}
+  }
 
   .album-detail{margin-top:56px;}
   .album-back{
@@ -661,6 +708,15 @@
         <div class="album-card-overlay">
           <span class="album-card-title">Tableaux électriques</span>
           <span class="album-card-count">11 photos</span>
+        </div>
+      </button>
+      <button type="button" class="album-card" data-album="videosurveillance" aria-label="Voir l'album Vidéosurveillance">
+        <div class="album-card-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 6h9l3 3v6l-3 3H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" stroke-linejoin="round"/><circle cx="9" cy="12" r="2.2"/><path d="M17 9l4-2v10l-4-2" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="album-card-overlay">
+          <span class="album-card-title">Vidéosurveillance</span>
+          <span class="album-card-count">Bientôt disponible</span>
         </div>
       </button>
     </div>
@@ -961,6 +1017,13 @@
       </div>
     </div>
 
+    <div class="album-detail" data-album="videosurveillance" style="display:none;">
+      <button type="button" class="album-back">← Tous les albums</button>
+      <h3>Vidéosurveillance</h3>
+      <span class="album-detail-count">Photos à venir prochainement</span>
+      <p style="color:var(--ink-dim); font-size:15px; max-width:520px; margin-top:-6px;">Nous complétons actuellement cet album avec nos derniers chantiers de vidéosurveillance. Revenez bientôt pour découvrir nos réalisations.</p>
+    </div>
+
     <div class="real-cta glass">
       <span class="label">Un projet ?</span>
       <h2>Discutons de votre prochaine réalisation</h2>
@@ -1005,6 +1068,7 @@
             <a href="index.html#services">Portails</a>
             <a href="index.html#services">Borne de recharge</a>
             <a href="index.html#services">Interphone</a>
+            <a href="index.html#services">Vidéosurveillance</a>
           </nav>
         </div>
 
@@ -1032,6 +1096,14 @@
 <div class="mobile-cta-bar">
   <a href="tel:0612705657" class="call">📞 Appeler</a>
   <a href="index.html?devis=1#contact" class="quote js-devis">Demander un devis</a>
+</div>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button type="button" class="lightbox-close" aria-label="Fermer">&times;</button>
+  <button type="button" class="lightbox-prev" aria-label="Photo précédente">&#8249;</button>
+  <button type="button" class="lightbox-next" aria-label="Photo suivante">&#8250;</button>
+  <img class="lightbox-img" src="" alt="">
+  <div class="lightbox-caption"></div>
 </div>
 
 <script>
@@ -1113,6 +1185,63 @@
       var exists = Array.prototype.some.call(albumDetails, function(d){ return d.dataset.album === key; });
       if (exists) { showAlbum(key, false); }
     }
+  })();
+
+  // Lightbox plein écran pour les photos des albums
+  (function initLightbox(){
+    const lightbox = document.getElementById('lightbox');
+    if(!lightbox) return;
+    const lbImg = lightbox.querySelector('.lightbox-img');
+    const lbCaption = lightbox.querySelector('.lightbox-caption');
+    const btnClose = lightbox.querySelector('.lightbox-close');
+    const btnPrev = lightbox.querySelector('.lightbox-prev');
+    const btnNext = lightbox.querySelector('.lightbox-next');
+    let group = [];
+    let index = 0;
+
+    function update(){
+      const photo = group[index];
+      const img = photo.querySelector('img');
+      lbImg.src = img.currentSrc || img.src;
+      lbImg.alt = img.alt || '';
+      const ttl = photo.parentElement.querySelector('.real-cap .ttl');
+      lbCaption.textContent = ttl ? ttl.textContent : '';
+      const multi = group.length > 1;
+      btnPrev.style.display = multi ? '' : 'none';
+      btnNext.style.display = multi ? '' : 'none';
+    }
+    function open(g, i){
+      group = g; index = i;
+      update();
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function close(){
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+    function prev(){ index = (index - 1 + group.length) % group.length; update(); }
+    function next(){ index = (index + 1) % group.length; update(); }
+
+    document.querySelectorAll('.real-grid').forEach(function(grid){
+      const photos = Array.prototype.slice.call(grid.querySelectorAll('.real-photo'));
+      photos.forEach(function(photo, i){
+        photo.addEventListener('click', function(){ open(photos, i); });
+      });
+    });
+
+    btnClose.addEventListener('click', close);
+    btnPrev.addEventListener('click', prev);
+    btnNext.addEventListener('click', next);
+    lightbox.addEventListener('click', function(e){ if(e.target === lightbox){ close(); } });
+    document.addEventListener('keydown', function(e){
+      if(!lightbox.classList.contains('open')) return;
+      if(e.key === 'Escape') close();
+      if(e.key === 'ArrowLeft') prev();
+      if(e.key === 'ArrowRight') next();
+    });
   })();
 </script>
 
