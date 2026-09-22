@@ -277,14 +277,16 @@
   .rating-pill .count{font-weight:400; opacity:.85; line-height:1;}
   .cert-badge{
     display:inline-flex; align-items:center; gap:10px;
-    font-size:14px; font-weight:800; letter-spacing:.01em; color:var(--black);
+    font-size:14px; font-weight:700; letter-spacing:.01em; color:#fff;
     line-height:1; white-space:nowrap;
     padding:15px 24px; border-radius:100px;
-    background:#fff;
-    border:1.5px solid rgba(18,18,16,.1);
-    box-shadow:0 12px 30px rgba(0,0,0,.38);
+    background:var(--glass-fill);
+    backdrop-filter:blur(18px) saturate(160%);
+    -webkit-backdrop-filter:blur(18px) saturate(160%);
+    border:1px solid var(--glass-border-strong);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.3), 0 8px 22px rgba(0,0,0,.28);
   }
-  .cert-badge-icon{width:23px; height:23px; flex:none; display:block; color:var(--black);}
+  .cert-badge-icon{width:29px; height:29px; flex:none; display:block; color:#fff;}
 
   .trust{padding:64px 0 0;}
   .trust-grid{
@@ -545,24 +547,17 @@
     <div class="hero-ctas">
       <a href="#contact" class="btn btn-primary js-devis">Demander un devis</a>
       <span class="cert-badge" aria-label="Qualification IRVE, installation de bornes de recharge pour véhicules électriques">
-        <svg class="cert-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 21C9 20 6.6 18 5.6 15C4.6 12 4.9 8.6 7 6"/>
-          <g fill="currentColor" stroke="none">
-            <ellipse cx="9.6" cy="19.3" rx="1.7" ry="0.75" transform="rotate(-35 9.6 19.3)"/>
-            <ellipse cx="7.9" cy="17.1" rx="1.8" ry="0.78" transform="rotate(-55 7.9 17.1)"/>
-            <ellipse cx="6.6" cy="14.4" rx="1.85" ry="0.8" transform="rotate(-75 6.6 14.4)"/>
-            <ellipse cx="6.1" cy="11.4" rx="1.85" ry="0.8" transform="rotate(-100 6.1 11.4)"/>
-            <ellipse cx="6.6" cy="8.6" rx="1.8" ry="0.78" transform="rotate(-125 6.6 8.6)"/>
-            <ellipse cx="8.1" cy="6.4" rx="1.7" ry="0.75" transform="rotate(-150 8.1 6.4)"/>
-          </g>
-          <path d="M12 21C15 20 17.4 18 18.4 15C19.4 12 19.1 8.6 17 6"/>
-          <g fill="currentColor" stroke="none">
-            <ellipse cx="14.4" cy="19.3" rx="1.7" ry="0.75" transform="rotate(35 14.4 19.3)"/>
-            <ellipse cx="16.1" cy="17.1" rx="1.8" ry="0.78" transform="rotate(55 16.1 17.1)"/>
-            <ellipse cx="17.4" cy="14.4" rx="1.85" ry="0.8" transform="rotate(75 17.4 14.4)"/>
-            <ellipse cx="17.9" cy="11.4" rx="1.85" ry="0.8" transform="rotate(100 17.9 11.4)"/>
-            <ellipse cx="17.4" cy="8.6" rx="1.8" ry="0.78" transform="rotate(125 17.4 8.6)"/>
-            <ellipse cx="15.9" cy="6.4" rx="1.7" ry="0.75" transform="rotate(150 15.9 6.4)"/>
+        <svg class="cert-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6.436 8a8.6 8.6 0 0 0 -.436 2.727c0 4.017 2.686 7.273 6 7.273s6 -3.256 6 -7.273a8.6 8.6 0 0 0 -.436 -2.727" />
+          <path d="M14.5 21s-.682 -3 -2.5 -3s-2.5 3 -2.5 3" />
+          <path d="M18.52 5.23c.292 1.666 -1.02 2.77 -1.02 2.77s-1.603 -.563 -1.895 -2.23c-.292 -1.666 1.02 -2.77 1.02 -2.77s1.603 .563 1.895 2.23" />
+          <path d="M21.094 12.14c-1.281 1.266 -3.016 .76 -3.016 .76s-.454 -1.772 .828 -3.04c1.28 -1.266 3.016 -.76 3.016 -.76s.454 1.772 -.828 3.04" />
+          <path d="M17.734 18.826c-1.5 -.575 -1.734 -2.19 -1.734 -2.19s1.267 -1.038 2.767 -.462c1.5 .575 1.733 2.19 1.733 2.19s-1.267 1.038 -2.767 .462" />
+          <path d="M6.267 18.826c1.5 -.575 1.733 -2.19 1.733 -2.19s-1.267 -1.038 -2.767 -.462c-1.5 .575 -1.733 2.19 -1.733 2.19s1.267 1.038 2.767 .462" />
+          <path d="M2.906 12.14c1.281 1.266 3.016 .76 3.016 .76s.454 -1.772 -.828 -3.04c-1.281 -1.265 -3.016 -.76 -3.016 -.76s-.454 1.772 .828 3.04" />
+          <path d="M5.48 5.23c-.292 1.666 1.02 2.77 1.02 2.77s1.603 -.563 1.895 -2.23c.292 -1.666 -1.02 -2.77 -1.02 -2.77s-1.603 .563 -1.895 2.23" />
+          <g transform="translate(12 11) scale(0.28) translate(-12 -11)" fill="currentColor" stroke="none">
+            <path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" />
           </g>
         </svg>
         <span>Qualification IRVE</span>
