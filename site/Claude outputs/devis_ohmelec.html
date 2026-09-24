@@ -1,0 +1,247 @@
+<title>Devis Site Ohmelec</title>
+<style>
+:root{
+  --bg:#FAF7F1;
+  --surface:#FFFFFF;
+  --ink:#201C16;
+  --ink-soft:#6B6357;
+  --border:#E9E1D2;
+  --accent:#B8762A;
+  --accent-soft:#F3E4CC;
+  --line:#EEE7D8;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#171310;
+    --surface:#211C16;
+    --ink:#F2EDE3;
+    --ink-soft:#B5AB98;
+    --border:#3A3126;
+    --accent:#E3A15A;
+    --accent-soft:#3A2C18;
+    --line:#332B21;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#171310;
+  --surface:#211C16;
+  --ink:#F2EDE3;
+  --ink-soft:#B5AB98;
+  --border:#3A3126;
+  --accent:#E3A15A;
+  --accent-soft:#3A2C18;
+  --line:#332B21;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  padding:24px 16px 40px;
+  padding-block:24px 40px;
+}
+.wrap{max-width:520px;margin:0 auto}
+
+.eyebrow{
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--accent);
+  font-weight:600;
+  margin:0 0 6px;
+}
+h1{
+  font-family:'Fraunces',Georgia,serif;
+  font-size:32px;
+  line-height:1.1;
+  font-weight:600;
+  margin:0 0 4px;
+  text-wrap:balance;
+}
+.sub{
+  color:var(--ink-soft);
+  font-size:14px;
+  margin:0 0 28px;
+}
+
+h2{
+  font-family:'Fraunces',Georgia,serif;
+  font-size:17px;
+  font-weight:600;
+  margin:0 0 12px;
+}
+
+.card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:20px;
+  margin-bottom:16px;
+}
+
+.worklist{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.worklist li{
+  display:flex;
+  gap:10px;
+  font-size:14.5px;
+  line-height:1.45;
+  align-items:baseline;
+}
+.worklist li::before{
+  content:"";
+  flex:none;
+  width:6px;height:6px;
+  border-radius:50%;
+  background:var(--accent);
+  margin-top:6px;
+}
+.worklist b{font-weight:600}
+
+.price-card{
+  background:linear-gradient(180deg, var(--accent-soft), var(--surface) 65%);
+  border:1px solid var(--border);
+}
+.price-row{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:6px;
+}
+.price-label{font-size:14px;color:var(--ink-soft)}
+.price-strike{
+  font-size:15px;
+  color:var(--ink-soft);
+  text-decoration:line-through;
+  text-decoration-color:var(--ink-soft);
+}
+.price-big{
+  font-family:'Fraunces',Georgia,serif;
+  font-size:44px;
+  font-weight:600;
+  line-height:1;
+  margin:4px 0 8px;
+  font-variant-numeric:tabular-nums;
+}
+.price-note{
+  font-size:13px;
+  color:var(--ink-soft);
+  line-height:1.5;
+  padding-top:10px;
+  border-top:1px solid var(--line);
+  margin-top:6px;
+}
+.tag{
+  display:inline-block;
+  font-size:11.5px;
+  font-weight:600;
+  letter-spacing:.02em;
+  color:var(--accent);
+  background:var(--accent-soft);
+  border-radius:100px;
+  padding:3px 10px;
+  margin-bottom:10px;
+}
+
+.maint-row{
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+  margin-bottom:10px;
+}
+.maint-num{
+  font-family:'Fraunces',Georgia,serif;
+  font-size:30px;
+  font-weight:600;
+  font-variant-numeric:tabular-nums;
+}
+.maint-unit{font-size:14px;color:var(--ink-soft)}
+
+.incl{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:8px;
+  font-size:13.5px;
+  margin-top:12px;
+}
+.incl-row{
+  display:flex;
+  gap:8px;
+  padding:8px 0;
+  border-top:1px solid var(--line);
+  line-height:1.4;
+}
+.incl-row:first-child{border-top:none;padding-top:0}
+.mark-yes{color:var(--accent);font-weight:700;flex:none}
+.mark-no{color:var(--ink-soft);font-weight:700;flex:none}
+
+footer{
+  text-align:center;
+  font-size:12px;
+  color:var(--ink-soft);
+  margin-top:8px;
+}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<div class="wrap">
+  <p class="eyebrow">Ohmelec78.com</p>
+  <h1>Récap &amp; tarif du site</h1>
+  <p class="sub">À montrer à Christophe — ce qui a été fait, et la proposition de tarif.</p>
+
+  <div class="card">
+    <h2>Ce qui a été fait</h2>
+    <ul class="worklist">
+      <li><b>Refonte complète</b> — passage d'un site à une page à 3 pages structurées (accueil, réalisations, mentions légales)</li>
+      <li><b>Portfolio sur mesure</b> — système de galerie par albums, <b>11 catégories</b>, <b>481 photos</b> traitées une par une (tri, recadrage, format optimisé, légendes)</li>
+      <li><b>Album Salle cinéma</b> créé de A à Z (56 photos)</li>
+      <li><b>Réorganisation complète</b> des 11 albums pour mettre les plus belles photos en premier</li>
+      <li><b>Formulaire de contact</b> fonctionnel avec protection anti-spam</li>
+      <li><b>Galerie photo interactive</b> (plein écran, navigation)</li>
+      <li><b>Référencement Google (SEO)</b> — balises, données structurées, étoiles d'avis, plan du site</li>
+      <li><b>Site 100x plus léger</b> et rapide à charger</li>
+      <li><b>Migration hébergement + nom de domaine</b> vers Cloudflare, avec mise en ligne automatisée</li>
+    </ul>
+  </div>
+
+  <div class="card price-card">
+    <span class="tag">Tarif famille</span>
+    <div class="price-row">
+      <span class="price-label">Prix du marché pour ce travail</span>
+      <span class="price-strike">≈ 2 000 €</span>
+    </div>
+    <div class="price-big">1 000 €</div>
+    <div class="price-row">
+      <span class="price-label">Remise de 50%</span>
+    </div>
+    <div class="price-note">En échange, Christophe recommande Ohmelec auprès d'autres clients potentiels quand l'occasion se présente — un coup de pouce, pas une obligation chiffrée.</div>
+  </div>
+
+  <div class="card">
+    <h2>Maintenance mensuelle proposée</h2>
+    <div class="maint-row">
+      <span class="maint-num">70 €</span>
+      <span class="maint-unit">/ mois</span>
+    </div>
+    <div class="incl">
+      <div class="incl-row"><span class="mark-yes">✓</span> Renouvellement annuel du nom de domaine (inclus)</div>
+      <div class="incl-row"><span class="mark-yes">✓</span> Petites retouches et corrections</div>
+      <div class="incl-row"><span class="mark-yes">✓</span> Mises à jour de textes / coordonnées</div>
+      <div class="incl-row"><span class="mark-no">＋</span> Ajout d'un nouvel album photo ou refonte importante → devis séparé</div>
+    </div>
+  </div>
+
+  <footer>Document préparé le 24/09/2026 — à ajuster ensemble</footer>
+</div>
