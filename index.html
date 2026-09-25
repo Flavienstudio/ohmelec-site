@@ -367,6 +367,33 @@
   .avis-sub{font-size:15px; color:var(--ink-dim); margin-bottom:40px;}
   .avis p.note{max-width:520px; margin:0 auto 40px; color:var(--ink-dim); font-size:14px;}
 
+  .reviews-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:22px;
+    margin-top:56px; text-align:left;
+  }
+  .review-card{
+    padding:30px 26px;
+    border-radius:24px;
+    display:flex; flex-direction:column; gap:16px;
+  }
+  .review-top{display:flex; align-items:center; justify-content:space-between; gap:10px;}
+  .review-stars{font-size:12px; letter-spacing:3px; color:#f1c453;}
+  .review-source{
+    display:flex; align-items:center; gap:5px;
+    font-size:11px; letter-spacing:.04em; color:var(--ink-faint);
+  }
+  .review-source svg{width:13px; height:13px; flex:none;}
+  .review-card p{font-size:14.5px; line-height:1.65; color:var(--ink-dim); flex:1;}
+  .review-foot{display:flex; align-items:center; gap:12px; padding-top:16px; border-top:1px solid var(--hairline);}
+  .review-avatar{
+    width:38px; height:38px; border-radius:50%; flex:none;
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--serif); font-size:15px; font-weight:500; color:#1a1608;
+    background:linear-gradient(135deg, #f1c453, #c8862b);
+  }
+  .review-name{font-size:13.5px; font-weight:600; color:var(--ink);}
+  .review-date{font-size:12px; color:var(--ink-faint);}
+
   .contact-grid{display:grid; grid-template-columns:.85fr 1.15fr; gap:24px;}
   .contact-info{padding:44px; border-radius:28px;}
   .contact-info h2{margin-bottom:28px;}
@@ -498,6 +525,7 @@
     .form-row{grid-template-columns:1fr;}
     .about-text, .contact-info, .form{padding:32px;}
     .avis-panel{padding:48px 32px;}
+    .reviews-grid{grid-template-columns:repeat(2,1fr);}
   }
   @media (max-width: 560px){
     .services-grid{grid-template-columns:1fr;}
@@ -506,6 +534,8 @@
     .about-text, .contact-info, .form{padding:26px;}
     .avis-panel{padding:40px 22px;}
     .btn{white-space:normal; text-align:center; line-height:1.35;}
+    .reviews-grid{grid-template-columns:1fr; margin-top:40px;}
+    .review-card{padding:26px 22px;}
   }
 </style>
 </head>
@@ -714,6 +744,98 @@
       <div class="avis-score">4,8 / 5</div>
       <div class="avis-sub">Note moyenne sur 49 avis Google</div>
       <a href="https://www.google.com/search?q=Ohmelec+16+Rue+de+Lorraine+78600+Maisons-Laffitte+avis" target="_blank" rel="noopener" class="btn btn-light">Voir nos avis sur Google</a>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card glass">
+        <div class="review-top">
+          <span class="review-stars">★★★★★</span>
+          <span class="review-source"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.52 12.27c0-.85-.08-1.67-.22-2.45H12v4.64h6.47a5.53 5.53 0 0 1-2.4 3.63v3h3.87c2.27-2.09 3.58-5.17 3.58-8.82Z"/><path fill="#34A853" d="M12 24c3.24 0 5.96-1.08 7.94-2.91l-3.87-3c-1.08.72-2.45 1.15-4.07 1.15-3.13 0-5.78-2.11-6.73-4.96H1.27v3.1A12 12 0 0 0 12 24Z"/><path fill="#FBBC05" d="M5.27 14.28A7.2 7.2 0 0 1 4.89 12c0-.79.14-1.56.38-2.28v-3.1H1.27A12 12 0 0 0 0 12c0 1.94.46 3.77 1.27 5.38l4-3.1Z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.34.6 4.59 1.79l3.44-3.44C17.95 1.19 15.24 0 12 0A12 12 0 0 0 1.27 6.62l4 3.1C6.22 6.88 8.87 4.77 12 4.77Z"/></svg>Google</span>
+        </div>
+        <p>&ldquo;Intervention très satisfaisante avec Ohmelec. Monsieur Chaumont a communiqué clairement dès le départ et envoyé le devis rapidement. Les travaux ont été réalisés proprement et avec sérieux, résultat irréprochable. Professionnel fiable et réactif, je recommande.&rdquo;</p>
+        <div class="review-foot">
+          <span class="review-avatar">A</span>
+          <div>
+            <div class="review-name">antonio</div>
+            <div class="review-date">il y a 4 mois</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card glass">
+        <div class="review-top">
+          <span class="review-stars">★★★★★</span>
+          <span class="review-source"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.52 12.27c0-.85-.08-1.67-.22-2.45H12v4.64h6.47a5.53 5.53 0 0 1-2.4 3.63v3h3.87c2.27-2.09 3.58-5.17 3.58-8.82Z"/><path fill="#34A853" d="M12 24c3.24 0 5.96-1.08 7.94-2.91l-3.87-3c-1.08.72-2.45 1.15-4.07 1.15-3.13 0-5.78-2.11-6.73-4.96H1.27v3.1A12 12 0 0 0 12 24Z"/><path fill="#FBBC05" d="M5.27 14.28A7.2 7.2 0 0 1 4.89 12c0-.79.14-1.56.38-2.28v-3.1H1.27A12 12 0 0 0 0 12c0 1.94.46 3.77 1.27 5.38l4-3.1Z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.34.6 4.59 1.79l3.44-3.44C17.95 1.19 15.24 0 12 0A12 12 0 0 0 1.27 6.62l4 3.1C6.22 6.88 8.87 4.77 12 4.77Z"/></svg>Google</span>
+        </div>
+        <p>&ldquo;Une entreprise qui répond rapidement par téléphone et par e-mail. Une approche très professionnelle et conviviale. Le travail a été réalisé avec soin et ils ont vraiment pris le temps d'expliquer le fonctionnement des caméras installées. Nous les recommandons.&rdquo;</p>
+        <div class="review-foot">
+          <span class="review-avatar">M</span>
+          <div>
+            <div class="review-name">Marjolein</div>
+            <div class="review-date">il y a 2 mois</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card glass">
+        <div class="review-top">
+          <span class="review-stars">★★★★★</span>
+          <span class="review-source"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.52 12.27c0-.85-.08-1.67-.22-2.45H12v4.64h6.47a5.53 5.53 0 0 1-2.4 3.63v3h3.87c2.27-2.09 3.58-5.17 3.58-8.82Z"/><path fill="#34A853" d="M12 24c3.24 0 5.96-1.08 7.94-2.91l-3.87-3c-1.08.72-2.45 1.15-4.07 1.15-3.13 0-5.78-2.11-6.73-4.96H1.27v3.1A12 12 0 0 0 12 24Z"/><path fill="#FBBC05" d="M5.27 14.28A7.2 7.2 0 0 1 4.89 12c0-.79.14-1.56.38-2.28v-3.1H1.27A12 12 0 0 0 0 12c0 1.94.46 3.77 1.27 5.38l4-3.1Z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.34.6 4.59 1.79l3.44-3.44C17.95 1.19 15.24 0 12 0A12 12 0 0 0 1.27 6.62l4 3.1C6.22 6.88 8.87 4.77 12 4.77Z"/></svg>Google</span>
+        </div>
+        <p>&ldquo;Très bon conseils et installation très efficace. Mr Chaumont et son équipe sont agréables et professionnels. Mr Chaumont s'est organisé pour pouvoir faire ses travaux en fonction des paysagistes qui n'avaient pas prévu l'électricité dans leur planning et ça a été apprécié. Je recommande.&rdquo;</p>
+        <div class="review-foot">
+          <span class="review-avatar">D</span>
+          <div>
+            <div class="review-name">Delphine Ingelaere</div>
+            <div class="review-date">il y a 10 mois</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card glass">
+        <div class="review-top">
+          <span class="review-stars">★★★★★</span>
+          <span class="review-source"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.52 12.27c0-.85-.08-1.67-.22-2.45H12v4.64h6.47a5.53 5.53 0 0 1-2.4 3.63v3h3.87c2.27-2.09 3.58-5.17 3.58-8.82Z"/><path fill="#34A853" d="M12 24c3.24 0 5.96-1.08 7.94-2.91l-3.87-3c-1.08.72-2.45 1.15-4.07 1.15-3.13 0-5.78-2.11-6.73-4.96H1.27v3.1A12 12 0 0 0 12 24Z"/><path fill="#FBBC05" d="M5.27 14.28A7.2 7.2 0 0 1 4.89 12c0-.79.14-1.56.38-2.28v-3.1H1.27A12 12 0 0 0 0 12c0 1.94.46 3.77 1.27 5.38l4-3.1Z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.34.6 4.59 1.79l3.44-3.44C17.95 1.19 15.24 0 12 0A12 12 0 0 0 1.27 6.62l4 3.1C6.22 6.88 8.87 4.77 12 4.77Z"/></svg>Google</span>
+        </div>
+        <p>&ldquo;Conseil avisé, disponibilité, efficacité. L'éclairage du jardin est à la hauteur de nos attentes : savoir faire et élégance.&rdquo;</p>
+        <div class="review-foot">
+          <span class="review-avatar">C</span>
+          <div>
+            <div class="review-name">Chris A.</div>
+            <div class="review-date">il y a 3 mois</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card glass">
+        <div class="review-top">
+          <span class="review-stars">★★★★★</span>
+          <span class="review-source"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.52 12.27c0-.85-.08-1.67-.22-2.45H12v4.64h6.47a5.53 5.53 0 0 1-2.4 3.63v3h3.87c2.27-2.09 3.58-5.17 3.58-8.82Z"/><path fill="#34A853" d="M12 24c3.24 0 5.96-1.08 7.94-2.91l-3.87-3c-1.08.72-2.45 1.15-4.07 1.15-3.13 0-5.78-2.11-6.73-4.96H1.27v3.1A12 12 0 0 0 12 24Z"/><path fill="#FBBC05" d="M5.27 14.28A7.2 7.2 0 0 1 4.89 12c0-.79.14-1.56.38-2.28v-3.1H1.27A12 12 0 0 0 0 12c0 1.94.46 3.77 1.27 5.38l4-3.1Z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.34.6 4.59 1.79l3.44-3.44C17.95 1.19 15.24 0 12 0A12 12 0 0 0 1.27 6.62l4 3.1C6.22 6.88 8.87 4.77 12 4.77Z"/></svg>Google</span>
+        </div>
+        <p>&ldquo;Excellent travail, délais difficiles tenus, en plus ils m'ont trouvé au pied levé une société très sérieuse et efficace pour la peinture après les travaux d'installation du système électrique, et une femme de ménage très sérieuse et compétente pour couronner le tout.&rdquo;</p>
+        <div class="review-foot">
+          <span class="review-avatar">P</span>
+          <div>
+            <div class="review-name">Philippe GRAU</div>
+            <div class="review-date">il y a 9 mois</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card glass">
+        <div class="review-top">
+          <span class="review-stars">★★★★★</span>
+          <span class="review-source"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.52 12.27c0-.85-.08-1.67-.22-2.45H12v4.64h6.47a5.53 5.53 0 0 1-2.4 3.63v3h3.87c2.27-2.09 3.58-5.17 3.58-8.82Z"/><path fill="#34A853" d="M12 24c3.24 0 5.96-1.08 7.94-2.91l-3.87-3c-1.08.72-2.45 1.15-4.07 1.15-3.13 0-5.78-2.11-6.73-4.96H1.27v3.1A12 12 0 0 0 12 24Z"/><path fill="#FBBC05" d="M5.27 14.28A7.2 7.2 0 0 1 4.89 12c0-.79.14-1.56.38-2.28v-3.1H1.27A12 12 0 0 0 0 12c0 1.94.46 3.77 1.27 5.38l4-3.1Z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.34.6 4.59 1.79l3.44-3.44C17.95 1.19 15.24 0 12 0A12 12 0 0 0 1.27 6.62l4 3.1C6.22 6.88 8.87 4.77 12 4.77Z"/></svg>Google</span>
+        </div>
+        <p>&ldquo;Je tiens à remercier cet électricien pour son excellent travail. Il a fait preuve d'un grand professionnalisme. Toujours à l'écoute, il a su répondre à toutes mes questions et a veillé à ce que tout soit fait dans les règles de l'art. Il est sérieux, ce qui installe un climat de grande confiance. Je le recommande vivement !&rdquo;</p>
+        <div class="review-foot">
+          <span class="review-avatar">H</span>
+          <div>
+            <div class="review-name">Hardy Hélène</div>
+            <div class="review-date">il y a 2 ans</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
