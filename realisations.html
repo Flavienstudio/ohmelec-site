@@ -622,6 +622,20 @@
   .album-detail-count{display:block; margin-bottom:30px; color:var(--ink-faint); font-size:12.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:600;}
   .album-detail .real-grid{margin-top:0;}
 
+  .cert-badge{
+    display:inline-flex; align-items:center; gap:10px;
+    font-size:14px; font-weight:700; letter-spacing:.01em; color:#fff;
+    line-height:1; white-space:nowrap;
+    padding:15px 24px; border-radius:100px;
+    background:var(--glass-fill);
+    backdrop-filter:blur(18px) saturate(160%);
+    -webkit-backdrop-filter:blur(18px) saturate(160%);
+    border:1px solid var(--glass-border-strong);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.3), 0 8px 22px rgba(0,0,0,.28);
+    margin:-6px 0 30px;
+  }
+  .cert-badge-icon{width:29px; height:29px; flex:none; display:block; color:#fff;}
+
   @media (max-width:900px){
     .real-grid{grid-template-columns:repeat(2,1fr); gap:22px;}
     .album-grid{grid-template-columns:repeat(2,1fr); gap:20px;}
@@ -696,10 +710,10 @@
           <span class="album-card-count">154 photos</span>
         </div>
       </button>
-      <button type="button" class="album-card" data-album="bornes" aria-label="Voir l'album Bornes de recharge">
-        <picture><source srcset="images/cover_bornes.webp" type="image/webp"><img src="images/cover_bornes.jpg" alt="Bornes de recharge" loading="lazy" decoding="async"></picture>
+      <button type="button" class="album-card" data-album="bornes" aria-label="Voir l'album Prise Green up">
+        <picture><source srcset="images/cover_bornes.webp" type="image/webp"><img src="images/cover_bornes.jpg" alt="Prise Green up" loading="lazy" decoding="async"></picture>
         <div class="album-card-overlay">
-          <span class="album-card-title">Bornes de recharge</span>
+          <span class="album-card-title">Prise Green up</span>
           <span class="album-card-count">17 photos</span>
         </div>
       </button>
@@ -750,6 +764,13 @@
         <div class="album-card-overlay">
           <span class="album-card-title">Salle cinéma</span>
           <span class="album-card-count">56 photos</span>
+        </div>
+      </button>
+      <button type="button" class="album-card" data-album="eclairages" aria-label="Voir l'album Éclairages">
+        <picture><source srcset="images/eclairage_new104.webp" type="image/webp"><img src="images/eclairage_new104.jpg" alt="Éclairages" loading="lazy" decoding="async"></picture>
+        <div class="album-card-overlay">
+          <span class="album-card-title">Éclairages</span>
+          <span class="album-card-count">189 photos</span>
         </div>
       </button>
     </div>
@@ -1748,8 +1769,24 @@
 
     <div class="album-detail" data-album="bornes" style="display:none;">
       <button type="button" class="album-back">← Tous les albums</button>
-      <h3>Bornes de recharge</h3>
+      <h3>Prise Green up</h3>
       <span class="album-detail-count">17 photos</span>
+      <span class="cert-badge" aria-label="Qualification IRVE, installation de prises Green up pour véhicules électriques">
+        <svg class="cert-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6.436 8a8.6 8.6 0 0 0 -.436 2.727c0 4.017 2.686 7.273 6 7.273s6 -3.256 6 -7.273a8.6 8.6 0 0 0 -.436 -2.727" />
+          <path d="M14.5 21s-.682 -3 -2.5 -3s-2.5 3 -2.5 3" />
+          <path d="M18.52 5.23c.292 1.666 -1.02 2.77 -1.02 2.77s-1.603 -.563 -1.895 -2.23c-.292 -1.666 1.02 -2.77 1.02 -2.77s1.603 .563 1.895 2.23" />
+          <path d="M21.094 12.14c-1.281 1.266 -3.016 .76 -3.016 .76s-.454 -1.772 .828 -3.04c1.28 -1.266 3.016 -.76 3.016 -.76s.454 1.772 -.828 3.04" />
+          <path d="M17.734 18.826c-1.5 -.575 -1.734 -2.19 -1.734 -2.19s1.267 -1.038 2.767 -.462c1.5 .575 1.733 2.19 1.733 2.19s-1.267 1.038 -2.767 .462" />
+          <path d="M6.267 18.826c1.5 -.575 1.733 -2.19 1.733 -2.19s-1.267 -1.038 -2.767 -.462c-1.5 .575 -1.733 2.19 -1.733 2.19s1.267 1.038 2.767 .462" />
+          <path d="M2.906 12.14c1.281 1.266 3.016 .76 3.016 .76s.454 -1.772 -.828 -3.04c-1.281 -1.265 -3.016 -.76 -3.016 -.76s-.454 1.772 .828 3.04" />
+          <path d="M5.48 5.23c-.292 1.666 1.02 2.77 1.02 2.77s1.603 -.563 1.895 -2.23c.292 -1.666 -1.02 -2.77 -1.02 -2.77s-1.603 .563 -1.895 2.23" />
+          <g transform="translate(12 11) scale(0.28) translate(-12 -11)" fill="currentColor" stroke="none">
+            <path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" />
+          </g>
+        </svg>
+        <span>Qualification IRVE</span>
+      </span>
       <div class="real-grid">
         <div class="real-item">
           <div class="real-photo"><picture><source srcset="images/borne_new011.webp" type="image/webp"><img src="images/borne_new011.jpg" alt="Mobilité électrique — Prise Green up renforcée sur pied" loading="lazy" decoding="async"></picture></div>
@@ -1760,64 +1797,64 @@
           <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Prise Green up renforcée sur pied</span></div>
         </div>
         <div class="real-item">
-          <div class="real-photo"><picture><source srcset="images/borne_new004.webp" type="image/webp"><img src="images/borne_new004.jpg" alt="Mobilité électrique — Borne de recharge, accès facilité" loading="lazy" decoding="async"></picture></div>
-          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Borne de recharge, accès facilité</span></div>
+          <div class="real-photo"><picture><source srcset="images/borne_new004.webp" type="image/webp"><img src="images/borne_new004.jpg" alt="Mobilité électrique — Prise Green up, accès facilité" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Prise Green up, accès facilité</span></div>
         </div>
         <div class="real-item">
-          <div class="real-photo"><picture><source srcset="images/borne_new002.webp" type="image/webp"><img src="images/borne_new002.jpg" alt="Mobilité électrique — Borne de recharge, installation extérieure" loading="lazy" decoding="async"></picture></div>
-          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Borne de recharge, installation extérieure</span></div>
+          <div class="real-photo"><picture><source srcset="images/borne_new002.webp" type="image/webp"><img src="images/borne_new002.jpg" alt="Mobilité électrique — Prise Green up, installation extérieure" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Prise Green up, installation extérieure</span></div>
         </div>
         <div class="real-item">
-          <div class="real-photo"><picture><source srcset="images/borne_recharge_exterieur1.webp" type="image/webp"><img src="images/borne_recharge_exterieur1.jpg" alt="Borne de recharge installée en allée extérieure" loading="lazy" decoding="async"></picture></div>
-          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Borne de recharge, allée extérieure</span></div>
+          <div class="real-photo"><picture><source srcset="images/borne_recharge_exterieur1.webp" type="image/webp"><img src="images/borne_recharge_exterieur1.jpg" alt="Prise Green up installée en allée extérieure" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Prise Green up, allée extérieure</span></div>
         </div>
         <div class="real-item">
-          <div class="real-photo"><picture><source srcset="images/borne_recharge_ve.webp" type="image/webp"><img src="images/borne_recharge_ve.jpg" alt="Borne de recharge pour véhicule électrique" loading="lazy" decoding="async"></picture></div>
-          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Borne de recharge</span></div>
+          <div class="real-photo"><picture><source srcset="images/borne_recharge_ve.webp" type="image/webp"><img src="images/borne_recharge_ve.jpg" alt="Prise Green up pour véhicule électrique" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Prise Green up</span></div>
         </div>
         <div class="real-item">
-          <div class="real-photo"><picture><source srcset="images/borne_new001.webp" type="image/webp"><img src="images/borne_new001.jpg" alt="Mobilité électrique — Borne de recharge, allée en briques" loading="lazy" decoding="async"></picture></div>
-          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Borne de recharge, allée en briques</span></div>
+          <div class="real-photo"><picture><source srcset="images/borne_new001.webp" type="image/webp"><img src="images/borne_new001.jpg" alt="Mobilité électrique — Prise Green up, allée en briques" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Prise Green up, allée en briques</span></div>
         </div>
         <div class="real-item">
-          <div class="real-photo"><picture><source srcset="images/borne_recharge_exterieur2.webp" type="image/webp"><img src="images/borne_recharge_exterieur2.jpg" alt="Borne de recharge sur pied installée dans un massif végétal" loading="lazy" decoding="async"></picture></div>
-          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Borne de recharge sur pied, extérieur</span></div>
+          <div class="real-photo"><picture><source srcset="images/borne_recharge_exterieur2.webp" type="image/webp"><img src="images/borne_recharge_exterieur2.jpg" alt="Prise Green up sur pied installée dans un massif végétal" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Prise Green up sur pied, extérieur</span></div>
         </div>
         <div class="real-item">
-          <div class="real-photo"><picture><source srcset="images/borne_new003.webp" type="image/webp"><img src="images/borne_new003.jpg" alt="Mobilité électrique — Borne de recharge, véhicule en charge" loading="lazy" decoding="async"></picture></div>
-          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Borne de recharge, véhicule en charge</span></div>
+          <div class="real-photo"><picture><source srcset="images/borne_new003.webp" type="image/webp"><img src="images/borne_new003.jpg" alt="Mobilité électrique — Prise Green up, véhicule en charge" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Prise Green up, véhicule en charge</span></div>
         </div>
         <div class="real-item">
-          <div class="real-photo"><picture><source srcset="images/borne_new005.webp" type="image/webp"><img src="images/borne_new005.jpg" alt="Mobilité électrique — Borne de recharge, allée pavée" loading="lazy" decoding="async"></picture></div>
-          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Borne de recharge, allée pavée</span></div>
+          <div class="real-photo"><picture><source srcset="images/borne_new005.webp" type="image/webp"><img src="images/borne_new005.jpg" alt="Mobilité électrique — Prise Green up, allée pavée" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Prise Green up, allée pavée</span></div>
         </div>
         <div class="real-item">
-          <div class="real-photo"><picture><source srcset="images/borne_recharge_murale.webp" type="image/webp"><img src="images/borne_recharge_murale.jpg" alt="Borne de recharge murale avec câble enroulé" loading="lazy" decoding="async"></picture></div>
-          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Borne de recharge murale</span></div>
+          <div class="real-photo"><picture><source srcset="images/borne_recharge_murale.webp" type="image/webp"><img src="images/borne_recharge_murale.jpg" alt="Prise Green up murale avec câble enroulé" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Prise Green up murale</span></div>
         </div>
         <div class="real-item">
-          <div class="real-photo"><picture><source srcset="images/borne_new006.webp" type="image/webp"><img src="images/borne_new006.jpg" alt="Mobilité électrique — Borne de recharge, stationnement résidentiel" loading="lazy" decoding="async"></picture></div>
-          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Borne de recharge, stationnement résidentiel</span></div>
+          <div class="real-photo"><picture><source srcset="images/borne_new006.webp" type="image/webp"><img src="images/borne_new006.jpg" alt="Mobilité électrique — Prise Green up, stationnement résidentiel" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Prise Green up, stationnement résidentiel</span></div>
         </div>
         <div class="real-item">
-          <div class="real-photo"><picture><source srcset="images/borne_recharge_gros_plan.webp" type="image/webp"><img src="images/borne_recharge_gros_plan.jpg" alt="Borne de recharge, vue rapprochée" loading="lazy" decoding="async"></picture></div>
-          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Borne de recharge, finition</span></div>
+          <div class="real-photo"><picture><source srcset="images/borne_recharge_gros_plan.webp" type="image/webp"><img src="images/borne_recharge_gros_plan.jpg" alt="Prise Green up, vue rapprochée" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Prise Green up, finition</span></div>
         </div>
         <div class="real-item">
-          <div class="real-photo"><picture><source srcset="images/borne_new007.webp" type="image/webp"><img src="images/borne_new007.jpg" alt="Mobilité électrique — Borne de recharge murale, câble enroulé" loading="lazy" decoding="async"></picture></div>
-          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Borne de recharge murale, câble enroulé</span></div>
+          <div class="real-photo"><picture><source srcset="images/borne_new007.webp" type="image/webp"><img src="images/borne_new007.jpg" alt="Mobilité électrique — Prise Green up murale, câble enroulé" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Prise Green up murale, câble enroulé</span></div>
         </div>
         <div class="real-item">
-          <div class="real-photo"><picture><source srcset="images/borne_new008.webp" type="image/webp"><img src="images/borne_new008.jpg" alt="Mobilité électrique — Borne de recharge anthracite dans un jardin, avec borne lumineuse assortie" loading="lazy" decoding="async"></picture></div>
-          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Borne de recharge, jardin avec éclairage assorti</span></div>
+          <div class="real-photo"><picture><source srcset="images/borne_new008.webp" type="image/webp"><img src="images/borne_new008.jpg" alt="Mobilité électrique — Prise Green up anthracite dans un jardin, avec borne lumineuse assortie" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Prise Green up, jardin avec éclairage assorti</span></div>
         </div>
         <div class="real-item">
-          <div class="real-photo"><picture><source srcset="images/borne_new009.webp" type="image/webp"><img src="images/borne_new009.jpg" alt="Mobilité électrique — Borne de recharge murale, façade enduite" loading="lazy" decoding="async"></picture></div>
-          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Borne de recharge, installation sur façade</span></div>
+          <div class="real-photo"><picture><source srcset="images/borne_new009.webp" type="image/webp"><img src="images/borne_new009.jpg" alt="Mobilité électrique — Prise Green up murale, façade enduite" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Prise Green up, installation sur façade</span></div>
         </div>
         <div class="real-item">
-          <div class="real-photo"><picture><source srcset="images/borne_new010.webp" type="image/webp"><img src="images/borne_new010.jpg" alt="Mobilité électrique — Borne de recharge contre un mur en pierre" loading="lazy" decoding="async"></picture></div>
-          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Borne de recharge, mur en pierre</span></div>
+          <div class="real-photo"><picture><source srcset="images/borne_new010.webp" type="image/webp"><img src="images/borne_new010.jpg" alt="Mobilité électrique — Prise Green up contre un mur en pierre" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Mobilité électrique</span><span class="ttl">Prise Green up, mur en pierre</span></div>
         </div>
       </div>
     </div>
@@ -2778,6 +2815,770 @@
         <div class="real-item">
           <div class="real-photo"><picture><source srcset="images/cinema_new056.webp" type="image/webp"><img src="images/cinema_new056.jpg" alt="Salle cinéma — Chantier, placard technique avec prises" loading="lazy" decoding="async"></picture></div>
           <div class="real-cap"><span class="cat">Salle cinéma</span><span class="ttl">Chantier, placard technique avec prises</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="album-detail" data-album="eclairages" style="display:none;">
+      <button type="button" class="album-back">← Tous les albums</button>
+      <h3>Éclairages</h3>
+      <span class="album-detail-count">189 photos</span>
+      <div class="real-grid">
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new001.webp" type="image/webp"><img src="images/eclairage_new001.jpg" alt="Éclairage décoratif — Suspension au-dessus du salon" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension au-dessus du salon</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new002.webp" type="image/webp"><img src="images/eclairage_new002.jpg" alt="Éclairage intérieur — Plafonnier chambre" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage intérieur</span><span class="ttl">Plafonnier chambre</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new003.webp" type="image/webp"><img src="images/eclairage_new003.jpg" alt="Éclairage intérieur — Plafonnier chambre" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage intérieur</span><span class="ttl">Plafonnier chambre</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new004.webp" type="image/webp"><img src="images/eclairage_new004.jpg" alt="Chantier — Corniche LED rouge en cours d'installation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Corniche LED rouge en cours d'installation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new005.webp" type="image/webp"><img src="images/eclairage_new005.jpg" alt="Éclairage LED — Corniche lumineuse au plafond" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Corniche lumineuse au plafond</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new006.webp" type="image/webp"><img src="images/eclairage_new006.jpg" alt="Éclairage LED — Corniche lumineuse au plafond" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Corniche lumineuse au plafond</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new007.webp" type="image/webp"><img src="images/eclairage_new007.jpg" alt="Éclairage décoratif — Lustre au-dessus du salon" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Lustre au-dessus du salon</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new008.webp" type="image/webp"><img src="images/eclairage_new008.jpg" alt="Éclairage décoratif — Suspension au-dessus de la table" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension au-dessus de la table</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new009.webp" type="image/webp"><img src="images/eclairage_new009.jpg" alt="Éclairage d'ambiance — Applique murale" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Applique murale</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new010.webp" type="image/webp"><img src="images/eclairage_new010.jpg" alt="Éclairage LED — Spot orientable design" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spot orientable design</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new011.webp" type="image/webp"><img src="images/eclairage_new011.jpg" alt="Éclairage LED — Spots encastrés, pièce à vivre" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, pièce à vivre</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new012.webp" type="image/webp"><img src="images/eclairage_new012.jpg" alt="Chantier — Corniche LED rouge en cours d'installation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Corniche LED rouge en cours d'installation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new013.webp" type="image/webp"><img src="images/eclairage_new013.jpg" alt="Éclairage LED — Corniche lumineuse au plafond" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Corniche lumineuse au plafond</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new014.webp" type="image/webp"><img src="images/eclairage_new014.jpg" alt="Éclairage d'ambiance — Corniche LED bleue" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Corniche LED bleue</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new015.webp" type="image/webp"><img src="images/eclairage_new015.jpg" alt="Éclairage LED — Double spot mural" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Double spot mural</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new016.webp" type="image/webp"><img src="images/eclairage_new016.jpg" alt="Éclairage décoratif — Suspensions filaires, escalier" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspensions filaires, escalier</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new017.webp" type="image/webp"><img src="images/eclairage_new017.jpg" alt="Éclairage LED — Corniche lumineuse au plafond" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Corniche lumineuse au plafond</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new018.webp" type="image/webp"><img src="images/eclairage_new018.jpg" alt="Éclairage d'ambiance — Corniche LED rouge au plafond" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Corniche LED rouge au plafond</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new019.webp" type="image/webp"><img src="images/eclairage_new019.jpg" alt="Éclairage LED — Corniche lumineuse au plafond" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Corniche lumineuse au plafond</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new020.webp" type="image/webp"><img src="images/eclairage_new020.jpg" alt="Éclairage d'ambiance — Corniche LED rouge au plafond" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Corniche LED rouge au plafond</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new021.webp" type="image/webp"><img src="images/eclairage_new021.jpg" alt="Chantier — Corniche LED rouge en cours d'installation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Corniche LED rouge en cours d'installation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new022.webp" type="image/webp"><img src="images/eclairage_new022.jpg" alt="Éclairage décoratif — Suspensions au-dessus de la table" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspensions au-dessus de la table</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new023.webp" type="image/webp"><img src="images/eclairage_new023.jpg" alt="Éclairage professionnel — Corniche LED rouge, bureau" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage professionnel</span><span class="ttl">Corniche LED rouge, bureau</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new024.webp" type="image/webp"><img src="images/eclairage_new024.jpg" alt="Éclairage décoratif — Suspension sous voûte en pierre" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension sous voûte en pierre</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new025.webp" type="image/webp"><img src="images/eclairage_new025.jpg" alt="Éclairage décoratif — Suspension circulaire au salon" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension circulaire au salon</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new026.webp" type="image/webp"><img src="images/eclairage_new026.jpg" alt="Éclairage d'ambiance — Corniche LED rouge au plafond" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Corniche LED rouge au plafond</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new027.webp" type="image/webp"><img src="images/eclairage_new027.jpg" alt="Éclairage LED — Spots muraux" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots muraux</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new028.webp" type="image/webp"><img src="images/eclairage_new028.jpg" alt="Éclairage décoratif — Suspension linéaire, salle à manger" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension linéaire, salle à manger</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new029.webp" type="image/webp"><img src="images/eclairage_new029.jpg" alt="Éclairage LED — Corniche lumineuse au plafond" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Corniche lumineuse au plafond</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new030.webp" type="image/webp"><img src="images/eclairage_new030.jpg" alt="Chantier — Pièce en cours de rénovation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Pièce en cours de rénovation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new031.webp" type="image/webp"><img src="images/eclairage_new031.jpg" alt="Éclairage décoratif — Suspension sous voûte en pierre" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension sous voûte en pierre</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new032.webp" type="image/webp"><img src="images/eclairage_new032.jpg" alt="Éclairage LED — Corniche lumineuse au plafond" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Corniche lumineuse au plafond</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new033.webp" type="image/webp"><img src="images/eclairage_new033.jpg" alt="Éclairage d'ambiance — Corniche LED bleue" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Corniche LED bleue</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new034.webp" type="image/webp"><img src="images/eclairage_new034.jpg" alt="Éclairage d'ambiance — Caisson LED rouge au plafond" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Caisson LED rouge au plafond</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new035.webp" type="image/webp"><img src="images/eclairage_new035.jpg" alt="Éclairage d'escalier — Spots muraux, escalier" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'escalier</span><span class="ttl">Spots muraux, escalier</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new036.webp" type="image/webp"><img src="images/eclairage_new036.jpg" alt="Éclairage décoratif — Suspensions filaires, escalier" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspensions filaires, escalier</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new037.webp" type="image/webp"><img src="images/eclairage_new037.jpg" alt="Éclairage LED — Spots muraux sur rail" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots muraux sur rail</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new038.webp" type="image/webp"><img src="images/eclairage_new038.jpg" alt="Chantier — Corniche LED rouge en cours d'installation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Corniche LED rouge en cours d'installation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new039.webp" type="image/webp"><img src="images/eclairage_new039.jpg" alt="Éclairage LED — Spots sur rail, cuisine" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots sur rail, cuisine</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new040.webp" type="image/webp"><img src="images/eclairage_new040.jpg" alt="Éclairage LED — Spots sous voûte en pierre" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots sous voûte en pierre</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new041.webp" type="image/webp"><img src="images/eclairage_new041.jpg" alt="Éclairage LED — Spots encastrés, salon" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, salon</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new042.webp" type="image/webp"><img src="images/eclairage_new042.jpg" alt="Éclairage décoratif — Suspension salle à manger" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension salle à manger</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new043.webp" type="image/webp"><img src="images/eclairage_new043.jpg" alt="Éclairage LED — Corniche circulaire au plafond" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Corniche circulaire au plafond</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new044.webp" type="image/webp"><img src="images/eclairage_new044.jpg" alt="Éclairage d'ambiance — Applique murale" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Applique murale</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new045.webp" type="image/webp"><img src="images/eclairage_new045.jpg" alt="Éclairage LED — Spots sur rail" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots sur rail</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new046.webp" type="image/webp"><img src="images/eclairage_new046.jpg" alt="Éclairage d'ambiance — Applique murale" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Applique murale</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new047.webp" type="image/webp"><img src="images/eclairage_new047.jpg" alt="Éclairage décoratif — Suspension, salle de billard" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension, salle de billard</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new048.webp" type="image/webp"><img src="images/eclairage_new048.jpg" alt="Éclairage décoratif — Suspension linéaire, salle à manger" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension linéaire, salle à manger</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new049.webp" type="image/webp"><img src="images/eclairage_new049.jpg" alt="Chantier — Spot sur rail en cours d'installation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Spot sur rail en cours d'installation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new050.webp" type="image/webp"><img src="images/eclairage_new050.jpg" alt="Éclairage décoratif — Suspensions, salle à manger" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspensions, salle à manger</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new051.webp" type="image/webp"><img src="images/eclairage_new051.jpg" alt="Chantier — Plafonnier en cours d'installation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Plafonnier en cours d'installation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new052.webp" type="image/webp"><img src="images/eclairage_new052.jpg" alt="Éclairage LED — Spots sur rail" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots sur rail</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new053.webp" type="image/webp"><img src="images/eclairage_new053.jpg" alt="Éclairage LED — Corniche lumineuse au plafond" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Corniche lumineuse au plafond</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new054.webp" type="image/webp"><img src="images/eclairage_new054.jpg" alt="Éclairage LED — Spots sur rail" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots sur rail</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new055.webp" type="image/webp"><img src="images/eclairage_new055.jpg" alt="Éclairage d'ambiance — Corniche LED rouge" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Corniche LED rouge</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new056.webp" type="image/webp"><img src="images/eclairage_new056.jpg" alt="Éclairage décoratif — Suspensions apparentes" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspensions apparentes</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new057.webp" type="image/webp"><img src="images/eclairage_new057.jpg" alt="Éclairage décoratif — Suspension circulaire, salle à manger" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension circulaire, salle à manger</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new058.webp" type="image/webp"><img src="images/eclairage_new058.jpg" alt="Éclairage LED — Corniche lumineuse au plafond" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Corniche lumineuse au plafond</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new059.webp" type="image/webp"><img src="images/eclairage_new059.jpg" alt="Éclairage LED — Spots sur rail" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots sur rail</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new060.webp" type="image/webp"><img src="images/eclairage_new060.jpg" alt="Éclairage LED — Corniche lumineuse au plafond" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Corniche lumineuse au plafond</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new061.webp" type="image/webp"><img src="images/eclairage_new061.jpg" alt="Éclairage LED — Spots encastrés, entrée" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, entrée</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new062.webp" type="image/webp"><img src="images/eclairage_new062.jpg" alt="Éclairage LED — Spots encastrés, salon" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, salon</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new063.webp" type="image/webp"><img src="images/eclairage_new063.jpg" alt="Éclairage LED — Spots encastrés" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new064.webp" type="image/webp"><img src="images/eclairage_new064.jpg" alt="Éclairage d'ambiance — Caisson LED rouge au plafond" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Caisson LED rouge au plafond</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new065.webp" type="image/webp"><img src="images/eclairage_new065.jpg" alt="Éclairage d'ambiance — Caisson LED rouge au plafond" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Caisson LED rouge au plafond</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new066.webp" type="image/webp"><img src="images/eclairage_new066.jpg" alt="Éclairage LED — Spots encastrés, salon" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, salon</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new067.webp" type="image/webp"><img src="images/eclairage_new067.jpg" alt="Chantier — Pièce en cours de rénovation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Pièce en cours de rénovation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new068.webp" type="image/webp"><img src="images/eclairage_new068.jpg" alt="Chantier — Pièce en cours de rénovation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Pièce en cours de rénovation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new069.webp" type="image/webp"><img src="images/eclairage_new069.jpg" alt="Chantier — Pièce en cours de rénovation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Pièce en cours de rénovation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new070.webp" type="image/webp"><img src="images/eclairage_new070.jpg" alt="Éclairage LED — Spots encastrés, couloir" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, couloir</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new071.webp" type="image/webp"><img src="images/eclairage_new071.jpg" alt="Chantier — Couloir en cours de rénovation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Couloir en cours de rénovation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new072.webp" type="image/webp"><img src="images/eclairage_new072.jpg" alt="Chantier — Couloir en cours de rénovation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Couloir en cours de rénovation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new073.webp" type="image/webp"><img src="images/eclairage_new073.jpg" alt="Éclairage LED — Spots encastrés, couloir" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, couloir</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new074.webp" type="image/webp"><img src="images/eclairage_new074.jpg" alt="Éclairage décoratif — Plafonnier, salle à manger" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Plafonnier, salle à manger</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new075.webp" type="image/webp"><img src="images/eclairage_new075.jpg" alt="Éclairage d'ambiance — Corniche LED rouge, salle de jeux" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Corniche LED rouge, salle de jeux</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new076.webp" type="image/webp"><img src="images/eclairage_new076.jpg" alt="Éclairage d'ambiance — Corniche LED rouge, bar" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Corniche LED rouge, bar</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new077.webp" type="image/webp"><img src="images/eclairage_new077.jpg" alt="Éclairage d'ambiance — Corniche LED rouge, bar" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Corniche LED rouge, bar</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new078.webp" type="image/webp"><img src="images/eclairage_new078.jpg" alt="Éclairage d'ambiance — Bandeau LED rouge, bar" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Bandeau LED rouge, bar</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new079.webp" type="image/webp"><img src="images/eclairage_new079.jpg" alt="Éclairage LED — Spots encastrés, couloir" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, couloir</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new080.webp" type="image/webp"><img src="images/eclairage_new080.jpg" alt="Éclairage d'ambiance — Corniche LED bleue, couloir" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Corniche LED bleue, couloir</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new081.webp" type="image/webp"><img src="images/eclairage_new081.jpg" alt="Éclairage LED — Spots encastrés, bureau" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, bureau</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new082.webp" type="image/webp"><img src="images/eclairage_new082.jpg" alt="Éclairage LED — Spots encastrés, bureau" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, bureau</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new083.webp" type="image/webp"><img src="images/eclairage_new083.jpg" alt="Éclairage professionnel — Spots encastrés, local commercial" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage professionnel</span><span class="ttl">Spots encastrés, local commercial</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new084.webp" type="image/webp"><img src="images/eclairage_new084.jpg" alt="Éclairage professionnel — Spots encastrés, local commercial" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage professionnel</span><span class="ttl">Spots encastrés, local commercial</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new085.webp" type="image/webp"><img src="images/eclairage_new085.jpg" alt="Éclairage d'ambiance — Appliques murales" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Appliques murales</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new086.webp" type="image/webp"><img src="images/eclairage_new086.jpg" alt="Éclairage d'ambiance — Appliques murales" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Appliques murales</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new087.webp" type="image/webp"><img src="images/eclairage_new087.jpg" alt="Éclairage LED — Spot d'accentuation tableau" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spot d'accentuation tableau</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new088.webp" type="image/webp"><img src="images/eclairage_new088.jpg" alt="Éclairage LED — Spots encastrés, salon" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, salon</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new089.webp" type="image/webp"><img src="images/eclairage_new089.jpg" alt="Éclairage d'ambiance — Applique murale" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Applique murale</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new090.webp" type="image/webp"><img src="images/eclairage_new090.jpg" alt="Éclairage décoratif — Suspension, salle à manger" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension, salle à manger</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new091.webp" type="image/webp"><img src="images/eclairage_new091.jpg" alt="Éclairage LED — Spots d'accentuation au sol, couloir" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots d'accentuation au sol, couloir</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new092.webp" type="image/webp"><img src="images/eclairage_new092.jpg" alt="Éclairage LED — Spots d'accentuation au sol, couloir" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots d'accentuation au sol, couloir</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new093.webp" type="image/webp"><img src="images/eclairage_new093.jpg" alt="Éclairage LED — Spots encastrés, couloir" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, couloir</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new094.webp" type="image/webp"><img src="images/eclairage_new094.jpg" alt="Éclairage décoratif — Suspension circulaire, salle à manger" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension circulaire, salle à manger</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new095.webp" type="image/webp"><img src="images/eclairage_new095.jpg" alt="Éclairage décoratif — Suspension circulaire, salle à manger" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension circulaire, salle à manger</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new096.webp" type="image/webp"><img src="images/eclairage_new096.jpg" alt="Éclairage décoratif — Suspension circulaire, salle à manger" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension circulaire, salle à manger</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new097.webp" type="image/webp"><img src="images/eclairage_new097.jpg" alt="Éclairage d'ambiance — Applique murale ronde" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Applique murale ronde</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new098.webp" type="image/webp"><img src="images/eclairage_new098.jpg" alt="Éclairage d'ambiance — Appliques murales, chevet" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Appliques murales, chevet</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new099.webp" type="image/webp"><img src="images/eclairage_new099.jpg" alt="Éclairage LED — Spot encastré mural" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spot encastré mural</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new100.webp" type="image/webp"><img src="images/eclairage_new100.jpg" alt="Éclairage d'ambiance — Bandeau LED rose, salle de jeux" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Bandeau LED rose, salle de jeux</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new101.webp" type="image/webp"><img src="images/eclairage_new101.jpg" alt="Éclairage d'ambiance — Bandeau LED rose, salle de jeux" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Bandeau LED rose, salle de jeux</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new102.webp" type="image/webp"><img src="images/eclairage_new102.jpg" alt="Éclairage d'ambiance — Bandeau LED rose, salle de jeux" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Bandeau LED rose, salle de jeux</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new103.webp" type="image/webp"><img src="images/eclairage_new103.jpg" alt="Éclairage d'ambiance — Bandeau LED rose" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Bandeau LED rose</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new104.webp" type="image/webp"><img src="images/eclairage_new104.jpg" alt="Éclairage d'ambiance — Bandeau LED rose, bar" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Bandeau LED rose, bar</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new105.webp" type="image/webp"><img src="images/eclairage_new105.jpg" alt="Éclairage d'ambiance — Bandeau LED violet, bar" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Bandeau LED violet, bar</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new106.webp" type="image/webp"><img src="images/eclairage_new106.jpg" alt="Éclairage d'ambiance — Bandeau LED rose, bar" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Bandeau LED rose, bar</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new107.webp" type="image/webp"><img src="images/eclairage_new107.jpg" alt="Éclairage extérieur — Applique murale, façade en pierre" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage extérieur</span><span class="ttl">Applique murale, façade en pierre</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new108.webp" type="image/webp"><img src="images/eclairage_new108.jpg" alt="Éclairage d'ambiance — Applique murale décorative" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Applique murale décorative</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new109.webp" type="image/webp"><img src="images/eclairage_new109.jpg" alt="Éclairage LED — Applique murale, couloir" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Applique murale, couloir</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new110.webp" type="image/webp"><img src="images/eclairage_new110.jpg" alt="Éclairage décoratif — Plafonnier style industriel" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Plafonnier style industriel</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new111.webp" type="image/webp"><img src="images/eclairage_new111.jpg" alt="Éclairage décoratif — Suspension à boules" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension à boules</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new112.webp" type="image/webp"><img src="images/eclairage_new112.jpg" alt="Éclairage d'ambiance — Applique murale, chambre" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Applique murale, chambre</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new113.webp" type="image/webp"><img src="images/eclairage_new113.jpg" alt="Éclairage extérieur — Façade et allée" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage extérieur</span><span class="ttl">Façade et allée</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new114.webp" type="image/webp"><img src="images/eclairage_new114.jpg" alt="Éclairage extérieur — Façade" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage extérieur</span><span class="ttl">Façade</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new115.webp" type="image/webp"><img src="images/eclairage_new115.jpg" alt="Chantier — Corniche LED rouge en cours d'installation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Corniche LED rouge en cours d'installation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new116.webp" type="image/webp"><img src="images/eclairage_new116.jpg" alt="Chantier — Corniche LED rouge en cours d'installation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Corniche LED rouge en cours d'installation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new117.webp" type="image/webp"><img src="images/eclairage_new117.jpg" alt="Éclairage d'ambiance — Corniche LED rouge" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Corniche LED rouge</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new118.webp" type="image/webp"><img src="images/eclairage_new118.jpg" alt="Chantier — Pièce en cours de rénovation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Pièce en cours de rénovation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new119.webp" type="image/webp"><img src="images/eclairage_new119.jpg" alt="Chantier — Charpente apparente en cours de rénovation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Charpente apparente en cours de rénovation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new120.webp" type="image/webp"><img src="images/eclairage_new120.jpg" alt="Chantier — Pièce en cours de rénovation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Pièce en cours de rénovation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new121.webp" type="image/webp"><img src="images/eclairage_new121.jpg" alt="Chantier — Pièce en cours de rénovation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Pièce en cours de rénovation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new122.webp" type="image/webp"><img src="images/eclairage_new122.jpg" alt="Chantier — Pièce en cours de rénovation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Pièce en cours de rénovation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new123.webp" type="image/webp"><img src="images/eclairage_new123.jpg" alt="Chantier — Pièce en cours de rénovation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Pièce en cours de rénovation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new124.webp" type="image/webp"><img src="images/eclairage_new124.jpg" alt="Éclairage d'escalier — Spot mural, escalier" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'escalier</span><span class="ttl">Spot mural, escalier</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new125.webp" type="image/webp"><img src="images/eclairage_new125.jpg" alt="Éclairage d'escalier — Spot mural, escalier" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'escalier</span><span class="ttl">Spot mural, escalier</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new126.webp" type="image/webp"><img src="images/eclairage_new126.jpg" alt="Éclairage LED — Corniche lumineuse au plafond, salon" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Corniche lumineuse au plafond, salon</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new127.webp" type="image/webp"><img src="images/eclairage_new127.jpg" alt="Éclairage décoratif — Suspension, chambre d'enfant" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension, chambre d'enfant</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new128.webp" type="image/webp"><img src="images/eclairage_new128.jpg" alt="Éclairage LED — Spots encastrés" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new129.webp" type="image/webp"><img src="images/eclairage_new129.jpg" alt="Éclairage d'ambiance — Applique murale ronde" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Applique murale ronde</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new130.webp" type="image/webp"><img src="images/eclairage_new130.jpg" alt="Éclairage d'ambiance — Applique murale ronde" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Applique murale ronde</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new131.webp" type="image/webp"><img src="images/eclairage_new131.jpg" alt="Éclairage LED — Miroir lumineux, salle de bain" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Miroir lumineux, salle de bain</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new132.webp" type="image/webp"><img src="images/eclairage_new132.jpg" alt="Éclairage d'ambiance — Applique murale orientable" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Applique murale orientable</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new133.webp" type="image/webp"><img src="images/eclairage_new133.jpg" alt="Éclairage d'ambiance — Applique murale orientable" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Applique murale orientable</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new134.webp" type="image/webp"><img src="images/eclairage_new134.jpg" alt="Éclairage LED — Spot encastré, couloir" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spot encastré, couloir</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new135.webp" type="image/webp"><img src="images/eclairage_new135.jpg" alt="Éclairage LED — Spot encastré" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spot encastré</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new136.webp" type="image/webp"><img src="images/eclairage_new136.jpg" alt="Éclairage LED — Spot encastré" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spot encastré</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new137.webp" type="image/webp"><img src="images/eclairage_new137.jpg" alt="Éclairage LED — Spot sur rail, cave en pierre" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spot sur rail, cave en pierre</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new138.webp" type="image/webp"><img src="images/eclairage_new138.jpg" alt="Éclairage LED — Spot sur rail, cave en pierre" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spot sur rail, cave en pierre</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new139.webp" type="image/webp"><img src="images/eclairage_new139.jpg" alt="Éclairage LED — Spot sur rail, cave en pierre" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spot sur rail, cave en pierre</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new140.webp" type="image/webp"><img src="images/eclairage_new140.jpg" alt="Éclairage LED — Spots encastrés, couloir" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, couloir</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new141.webp" type="image/webp"><img src="images/eclairage_new141.jpg" alt="Éclairage LED — Spots encastrés, couloir" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, couloir</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new142.webp" type="image/webp"><img src="images/eclairage_new142.jpg" alt="Chantier — Cuisine en cours de rénovation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Cuisine en cours de rénovation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new143.webp" type="image/webp"><img src="images/eclairage_new143.jpg" alt="Chantier — Pièce en cours de rénovation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Pièce en cours de rénovation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new144.webp" type="image/webp"><img src="images/eclairage_new144.jpg" alt="Éclairage d'ambiance — Tube LED mural décoratif" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Tube LED mural décoratif</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new145.webp" type="image/webp"><img src="images/eclairage_new145.jpg" alt="Éclairage décoratif — Mise en valeur de charpente bois" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Mise en valeur de charpente bois</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new146.webp" type="image/webp"><img src="images/eclairage_new146.jpg" alt="Éclairage décoratif — Plafonnier rond" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Plafonnier rond</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new147.webp" type="image/webp"><img src="images/eclairage_new147.jpg" alt="Éclairage décoratif — Suspensions, cuisine" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspensions, cuisine</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new148.webp" type="image/webp"><img src="images/eclairage_new148.jpg" alt="Éclairage d'ambiance — Applique murale" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Applique murale</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new149.webp" type="image/webp"><img src="images/eclairage_new149.jpg" alt="Chantier — Pièce en cours de rénovation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Pièce en cours de rénovation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new150.webp" type="image/webp"><img src="images/eclairage_new150.jpg" alt="Chantier — Pièce en cours de rénovation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Pièce en cours de rénovation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new151.webp" type="image/webp"><img src="images/eclairage_new151.jpg" alt="Éclairage décoratif — Plafonnier, bibliothèque" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Plafonnier, bibliothèque</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new152.webp" type="image/webp"><img src="images/eclairage_new152.jpg" alt="Éclairage décoratif — Plafonnier, bibliothèque" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Plafonnier, bibliothèque</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new153.webp" type="image/webp"><img src="images/eclairage_new153.jpg" alt="Éclairage LED — Spot sur rail, cave en pierre" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spot sur rail, cave en pierre</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new154.webp" type="image/webp"><img src="images/eclairage_new154.jpg" alt="Éclairage d'ambiance — Applique murale" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Applique murale</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new155.webp" type="image/webp"><img src="images/eclairage_new155.jpg" alt="Chantier — Spots sur rail en cours d'installation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Spots sur rail en cours d'installation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new156.webp" type="image/webp"><img src="images/eclairage_new156.jpg" alt="Éclairage décoratif — Plafonnier rond" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Plafonnier rond</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new157.webp" type="image/webp"><img src="images/eclairage_new157.jpg" alt="Éclairage d'ambiance — Applique murale" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Applique murale</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new158.webp" type="image/webp"><img src="images/eclairage_new158.jpg" alt="Éclairage d'ambiance — Applique murale, entrée" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Applique murale, entrée</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new159.webp" type="image/webp"><img src="images/eclairage_new159.jpg" alt="Éclairage LED — Spots muraux, mur en pierre" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots muraux, mur en pierre</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new160.webp" type="image/webp"><img src="images/eclairage_new160.jpg" alt="Éclairage décoratif — Suspension type atelier" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension type atelier</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new161.webp" type="image/webp"><img src="images/eclairage_new161.jpg" alt="Éclairage LED — Spots encastrés, espace bureau" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, espace bureau</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new162.webp" type="image/webp"><img src="images/eclairage_new162.jpg" alt="Éclairage LED — Spots sur rail sous voûte" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots sur rail sous voûte</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new163.webp" type="image/webp"><img src="images/eclairage_new163.jpg" alt="Éclairage décoratif — Suspensions type ampoules apparentes" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspensions type ampoules apparentes</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new164.webp" type="image/webp"><img src="images/eclairage_new164.jpg" alt="Éclairage d'ambiance — Applique murale design" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Applique murale design</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new165.webp" type="image/webp"><img src="images/eclairage_new165.jpg" alt="Éclairage LED — Spot encastré, chambre" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spot encastré, chambre</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new166.webp" type="image/webp"><img src="images/eclairage_new166.jpg" alt="Éclairage LED — Spot encastré, salon" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spot encastré, salon</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new167.webp" type="image/webp"><img src="images/eclairage_new167.jpg" alt="Éclairage LED — Spots encastrés, bureau" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, bureau</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new168.webp" type="image/webp"><img src="images/eclairage_new168.jpg" alt="Éclairage LED — Spot orientable sur rail" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spot orientable sur rail</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new169.webp" type="image/webp"><img src="images/eclairage_new169.jpg" alt="Éclairage LED — Spots encastrés, couloir" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, couloir</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new170.webp" type="image/webp"><img src="images/eclairage_new170.jpg" alt="Éclairage décoratif — Suspension type cage" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension type cage</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new171.webp" type="image/webp"><img src="images/eclairage_new171.jpg" alt="Éclairage LED — Spots encastrés, couloir" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, couloir</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new172.webp" type="image/webp"><img src="images/eclairage_new172.jpg" alt="Chantier — Spot sur rail en cours d'installation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Spot sur rail en cours d'installation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new173.webp" type="image/webp"><img src="images/eclairage_new173.jpg" alt="Chantier — Spot sur rail en cours d'installation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Spot sur rail en cours d'installation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new174.webp" type="image/webp"><img src="images/eclairage_new174.jpg" alt="Éclairage LED — Spots encastrés, couloir" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, couloir</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new175.webp" type="image/webp"><img src="images/eclairage_new175.jpg" alt="Éclairage LED — Spots encastrés, couloir" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, couloir</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new176.webp" type="image/webp"><img src="images/eclairage_new176.jpg" alt="Éclairage LED — Spot encastré, escalier" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spot encastré, escalier</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new177.webp" type="image/webp"><img src="images/eclairage_new177.jpg" alt="Éclairage LED — Spot encastré" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spot encastré</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new178.webp" type="image/webp"><img src="images/eclairage_new178.jpg" alt="Éclairage décoratif — Suspension sous charpente bois" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension sous charpente bois</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new179.webp" type="image/webp"><img src="images/eclairage_new179.jpg" alt="Chantier — Spot encastré en cours d'installation" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Chantier</span><span class="ttl">Spot encastré en cours d'installation</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new180.webp" type="image/webp"><img src="images/eclairage_new180.jpg" alt="Éclairage LED — Spots encastrés, couloir" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, couloir</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new181.webp" type="image/webp"><img src="images/eclairage_new181.jpg" alt="Éclairage LED — Spots sur rail, dressing" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots sur rail, dressing</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new182.webp" type="image/webp"><img src="images/eclairage_new182.jpg" alt="Éclairage LED — Spots sur rail, dressing" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots sur rail, dressing</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new183.webp" type="image/webp"><img src="images/eclairage_new183.jpg" alt="Éclairage LED — Spots encastrés, piscine intérieure" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots encastrés, piscine intérieure</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new184.webp" type="image/webp"><img src="images/eclairage_new184.jpg" alt="Éclairage d'ambiance — Applique murale design" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage d'ambiance</span><span class="ttl">Applique murale design</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new185.webp" type="image/webp"><img src="images/eclairage_new185.jpg" alt="Éclairage LED — Spot sur rail, cave en pierre" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spot sur rail, cave en pierre</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new186.webp" type="image/webp"><img src="images/eclairage_new186.jpg" alt="Éclairage décoratif — Suspension en verre" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension en verre</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new187.webp" type="image/webp"><img src="images/eclairage_new187.jpg" alt="Éclairage décoratif — Suspension en verre" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Suspension en verre</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new188.webp" type="image/webp"><img src="images/eclairage_new188.jpg" alt="Éclairage LED — Spots orientables encastrés" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage LED</span><span class="ttl">Spots orientables encastrés</span></div>
+        </div>
+        <div class="real-item">
+          <div class="real-photo"><picture><source srcset="images/eclairage_new189.webp" type="image/webp"><img src="images/eclairage_new189.jpg" alt="Éclairage décoratif — Lustre à pampilles" loading="lazy" decoding="async"></picture></div>
+          <div class="real-cap"><span class="cat">Éclairage décoratif</span><span class="ttl">Lustre à pampilles</span></div>
         </div>
       </div>
     </div>
